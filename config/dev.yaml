@@ -74,3 +74,31 @@ gold_dataset:
     - _processed_at_utc
     - _feature_version
     - _feature_generated_at_utc
+
+training:
+  model_name: edit-success-logistic-regression
+  model_version: v1
+  random_seed: 42
+
+  target_column: observed_edit_success
+  group_column: candidate_id
+
+  split:
+    train_fraction: 0.70
+    validation_fraction: 0.15
+    test_fraction: 0.15
+
+  decision_threshold: 0.50
+
+  threshold_tuning:
+    minimum: 0.20
+    maximum: 0.80
+    step: 0.01
+    optimization_metric: f1
+
+  logistic_regression:
+    max_iter: 2000
+    class_weight: balanced
+    solver: lbfgs
+
+  output_dir: artifacts/training

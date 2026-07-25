@@ -13,6 +13,8 @@ dependencies = [
     "pandas",
     "pyarrow",
     "pydantic>=2",
+    "scikit-learn",
+    "joblib",
     "python-dotenv",
     "PyYAML",
 ]
