@@ -48,3 +48,12 @@ silver_processing:
   processing_date: "2026-07-25"
   fail_on_rejected_rows: true
   add_lineage_columns: true
+
+feature_generation:
+  feature_version: v1
+  processing_date: "2026-07-25"
+  compression: snappy
+  embedding_dimensions:
+    gene: 16
+    crop_line: 8
+    environment: 8
