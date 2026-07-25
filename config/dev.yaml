@@ -41,3 +41,10 @@ synthetic_data:
     environments: 12
     candidates: 1000
     experiments: 2500
+
+silver_processing:
+  output_format: parquet
+  compression: snappy
+  processing_date: "2026-07-25"
+  fail_on_rejected_rows: true
+  add_lineage_columns: true
