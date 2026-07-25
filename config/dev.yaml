@@ -114,6 +114,24 @@ sagemaker_pipeline:
     volume_size_gb: 10
     max_runtime_seconds: 1800
 
+  evaluation:
+    image_uri: 975050327570.dkr.ecr.us-east-1.amazonaws.com/gene-edit-ranking-evaluation@sha256:50d2f2f07ea93f779d3f3974a3a5a91f6264d705cedb3b3f2dd97db8b335d723
+    instance_type: ml.m5.large
+    instance_count: 1
+    volume_size_gb: 10
+    max_runtime_seconds: 900
+
+  inference:
+    image_uri: 975050327570.dkr.ecr.us-east-1.amazonaws.com/gene-edit-ranking-inference@sha256:3aed7ad4a3f6397df58d46531522d8f7d1bf8f2ddcf7698797fdaf5e84a5c39c
+    content_types:
+      - application/json
+    response_types:
+      - application/json
+    inference_instances:
+      - ml.m5.large
+    transform_instances:
+      - ml.m5.large
+
   model_package_group_name: gene-edit-ranking-edit-success
   default_approval_status: PendingManualApproval
 
