@@ -57,3 +57,20 @@ feature_generation:
     gene: 16
     crop_line: 8
     environment: 8
+
+gold_dataset:
+  dataset_version: v1
+  processing_date: "2026-07-25"
+  compression: snappy
+  target_columns:
+    - observed_edit_success
+    - yield_change_percent
+    - drought_response_score
+  drop_columns:
+    - is_synthetic
+    - _source_file
+    - _source_version
+    - _processing_date
+    - _processed_at_utc
+    - _feature_version
+    - _feature_generated_at_utc
