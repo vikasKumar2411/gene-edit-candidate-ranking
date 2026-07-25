@@ -102,3 +102,20 @@ training:
     solver: lbfgs
 
   output_dir: artifacts/training
+
+sagemaker_pipeline:
+  name: gene-edit-ranking-training-pipeline
+  role_arn: arn:aws:iam::975050327570:role/AmazonSageMakerExecutionRole-GeneEditRanking
+
+  training:
+    image_uri: 975050327570.dkr.ecr.us-east-1.amazonaws.com/gene-edit-ranking-training@sha256:f924d42357a512dbcc36f1b36c2ebea63c5a16f778e630082c569af912cb34ed
+    instance_type: ml.m5.large
+    instance_count: 1
+    volume_size_gb: 10
+    max_runtime_seconds: 1800
+
+  model_package_group_name: gene-edit-ranking-edit-success
+  default_approval_status: PendingManualApproval
+
+  quality_gate:
+    minimum_test_pr_auc: 0.60

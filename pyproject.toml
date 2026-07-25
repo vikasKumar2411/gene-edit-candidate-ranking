@@ -23,6 +23,8 @@ dependencies = [
 dev = [
     "pytest",
     "ruff",
+    "pytz",
+    "sagemaker==2.257.2",
 ]
 
 [tool.setuptools.packages.find]
