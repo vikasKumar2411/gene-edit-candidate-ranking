@@ -1,0 +1,43 @@
+project:
+  name: gene-edit-candidate-ranking
+  environment: dev
+
+aws:
+  region: us-east-1
+  s3_bucket: gene-edit-ranking-dev-975050327570-us-east-1-an
+
+data:
+  source_version: v1
+  local_raw_dir: data/raw
+
+  s3_prefixes:
+    raw: raw
+    silver: silver
+    features: features
+    gold: gold
+    models: models
+    batch_inputs: batch-inputs
+    batch_runs: batch-runs
+    monitoring: monitoring
+    system: system
+
+datasets:
+  genes:
+    filename: genes.csv
+  crop_lines:
+    filename: crop_lines.csv
+  environments:
+    filename: environments.csv
+  candidates:
+    filename: candidate_edits.csv
+  experiments:
+    filename: experiments.csv
+
+synthetic_data:
+  random_seed: 42
+  row_counts:
+    genes: 100
+    crop_lines: 30
+    environments: 12
+    candidates: 1000
+    experiments: 2500

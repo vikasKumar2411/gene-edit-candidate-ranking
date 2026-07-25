@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gene-edit-ranking"
+version = "0.1.0"
+description = "Synthetic AWS-based gene edit candidate ranking ML platform"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "boto3",
+    "numpy",
+    "pandas",
+    "pydantic>=2",
+    "python-dotenv",
+    "PyYAML",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "ruff",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "ms-python.python",
+    "ms-python.vscode-pylance",
+    "ms-toolsai.jupyter",
+    "redhat.vscode-yaml",
+    "amazonwebservices.aws-toolkit-vscode"
+  ]
+}

@@ -1,0 +1,57 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Environment variables and credentials
+.env
+.env.*
+!.env.example
+.aws/
+credentials
+
+# macOS
+.DS_Store
+
+# VS Code
+.vscode/
+!.vscode/settings.json
+!.vscode/extensions.json
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Local data
+data/raw/
+data/silver/
+data/features/
+data/gold/
+
+# Generated artifacts
+artifacts/
+models/
+outputs/
+logs/
+*.log
+
+# Coverage
+.coverage
+htmlcov/
+
+# Build outputs
+build/
+dist/
+*.egg-info/
+
+# Keep shared VS Code project configuration
+!.vscode/
+!.vscode/settings.json
+!.vscode/extensions.json
