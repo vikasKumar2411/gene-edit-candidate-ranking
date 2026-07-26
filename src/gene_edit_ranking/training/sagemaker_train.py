@@ -4,7 +4,6 @@ from __future__ import annotations
 
 import json
 import os
-import tarfile
 from dataclasses import asdict
 from pathlib import Path
 
@@ -30,7 +29,6 @@ from gene_edit_ranking.training.train_baseline import (
     summarize_split,
 )
 from gene_edit_ranking.validation.gold_schema import GOLD_TRAINING_SCHEMA
-
 
 TRAINING_CHANNEL = Path(
     os.environ.get("SM_CHANNEL_TRAINING", "/opt/ml/input/data/training")

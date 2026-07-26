@@ -16,7 +16,8 @@ from sagemaker.workflow.conditions import (
     ConditionGreaterThanOrEqualTo,
 )
 from sagemaker.workflow.fail_step import FailStep
-from sagemaker.workflow.functions import JsonGet, Join
+from sagemaker.workflow.functions import Join, JsonGet
+from sagemaker.workflow.model_step import ModelStep
 from sagemaker.workflow.parameters import (
     ParameterFloat,
     ParameterInteger,
@@ -25,7 +26,6 @@ from sagemaker.workflow.parameters import (
 from sagemaker.workflow.pipeline import Pipeline
 from sagemaker.workflow.pipeline_context import PipelineSession
 from sagemaker.workflow.properties import PropertyFile
-from sagemaker.workflow.model_step import ModelStep
 from sagemaker.workflow.steps import ProcessingStep, TrainingStep
 
 from gene_edit_ranking.config import load_config

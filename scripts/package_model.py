@@ -5,7 +5,7 @@ from __future__ import annotations
 import hashlib
 import json
 import tarfile
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
 
@@ -13,7 +13,6 @@ import joblib
 import sklearn
 
 from gene_edit_ranking.config import PROJECT_ROOT, load_config
-
 
 REQUIRED_FILES = (
     "model.joblib",
@@ -112,7 +111,7 @@ def main() -> None:
         "test_metrics_at_selected_threshold": threshold_selection[
             "test_metrics"
         ],
-        "created_at_utc": datetime.now(timezone.utc).isoformat(),
+        "created_at_utc": datetime.now(UTC).isoformat(),
         "is_synthetic": True,
         "disclaimer": (
             "Synthetic portfolio model only. "

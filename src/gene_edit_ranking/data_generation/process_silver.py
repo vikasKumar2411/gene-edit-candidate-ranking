@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
 
@@ -11,10 +11,9 @@ import pandas as pd
 
 from gene_edit_ranking.config import PROJECT_ROOT, load_config
 from gene_edit_ranking.validation.silver_schemas import (
-    DatasetSchema,
     SILVER_SCHEMAS,
+    DatasetSchema,
 )
-
 
 DATASET_FILES = {
     "genes": "genes.csv",
@@ -130,7 +129,7 @@ def add_lineage_columns(
         processing_date,
         utc=True,
     )
-    result["_processed_at_utc"] = datetime.now(timezone.utc)
+    result["_processed_at_utc"] = datetime.now(UTC)
 
     return result
 

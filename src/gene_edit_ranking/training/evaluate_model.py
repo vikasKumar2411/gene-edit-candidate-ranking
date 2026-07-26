@@ -21,7 +21,6 @@ from gene_edit_ranking.training.train_baseline import (
     summarize_split,
 )
 
-
 MODEL_INPUT_DIR = Path(
     os.environ.get(
         "MODEL_INPUT_DIR",

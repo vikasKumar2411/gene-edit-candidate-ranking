@@ -2,6 +2,5 @@
 
 from gene_edit_ranking.aws.upload_silver import main
 
-
 if __name__ == "__main__":
     main()

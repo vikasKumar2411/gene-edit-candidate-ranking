@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 
 import boto3
 
@@ -42,7 +42,7 @@ def main() -> None:
         f"s3://{bucket}/models/sagemaker-training-output/"
     )
 
-    timestamp = datetime.now(timezone.utc).strftime("%Y%m%d-%H%M%S")
+    timestamp = datetime.now(UTC).strftime("%Y%m%d-%H%M%S")
 
     training_job_name = (
         f"gene-edit-ranking-{timestamp}"

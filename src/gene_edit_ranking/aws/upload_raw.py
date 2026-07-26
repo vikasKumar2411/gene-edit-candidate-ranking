@@ -14,7 +14,6 @@ from botocore.exceptions import BotoCoreError, ClientError
 from gene_edit_ranking.config import PROJECT_ROOT, load_config
 from gene_edit_ranking.validation.validate_raw import run_validation
 
-
 DATASET_FILES = {
     "genes": "genes.csv",
     "crop_lines": "crop_lines.csv",

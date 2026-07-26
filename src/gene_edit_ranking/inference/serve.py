@@ -11,7 +11,6 @@ import joblib
 import pandas as pd
 from flask import Flask, Response, request
 
-
 MODEL_DIR = Path(os.environ.get("SM_MODEL_DIR", "/opt/ml/model"))
 MODEL_PATH = MODEL_DIR / "model.joblib"
 MANIFEST_PATH = MODEL_DIR / "feature_manifest.json"

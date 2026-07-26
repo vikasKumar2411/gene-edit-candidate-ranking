@@ -7,11 +7,11 @@ from datetime import UTC, datetime
 from pathlib import Path
 
 from gene_edit_ranking.config import load_config
-from gene_edit_ranking.inference.publish_predictions import (
-    publish_batch_outputs,
-)
 from gene_edit_ranking.inference.model_registry import (
     get_latest_approved_model,
+)
+from gene_edit_ranking.inference.publish_predictions import (
+    publish_batch_outputs,
 )
 
 
