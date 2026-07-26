@@ -56,3 +56,4 @@ dist/
 !.vscode/settings.json
 !.vscode/extensions.json
 artifacts/monitoring/
+artifacts/monitoring/
